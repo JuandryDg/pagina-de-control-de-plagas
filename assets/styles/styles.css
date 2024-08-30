@@ -1,0 +1,451 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal; 
+     
+  
+}
+.container-body{
+    width: 100%;
+    display: grid;
+    grid-template-columns:repeat(1, 1fr);
+    grid-template-areas:
+    "menu"
+    "main"
+    "section"
+     ;
+}
+menu{
+    grid-area: menu;
+    }
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: main;
+    
+}
+
+section{
+    grid-area: section;
+}
+footer{
+    background:#f4c90a;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.rem;
+    
+    
+    
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    display: none;
+}
+
+ul .pendon{
+    display: none;
+}
+
+
+
+container-form{
+  
+    display: flex;
+    padding: 14px;
+    border-radius: 28px;
+    
+    
+}
+
+
+
+.search-input {
+    width: 60%;
+    height: 2rem;    
+    border-radius: 10px;
+    border: none;
+    margin-left: 10px;
+}
+.img-search{
+    border-radius: 50%;
+    width: 3rem;
+    margin-right: 20px;
+    
+}
+
+
+form{
+   
+    height: 9vh;
+    transition: all 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(243, 212, 13);
+    padding: 10px;
+    margin-top: 5px;
+
+}
+
+
+form:hover{
+    height: 15vh;
+    
+}
+
+form > h4{
+    font-size: x-large;           
+    font-weight: 800;
+}
+
+input{
+    background-color:(255, 255,255,0.2);
+    border: 1px solid bisque;
+    border-radius: 3px;
+    padding: 0.5px;
+    display: flex;
+   
+}
+.menu-icon{
+    padding-left: 20px;
+}
+
+
+
+.hero {
+    background-image: url(../img/imagen-grande.jpg);
+    width:100%;
+    height:14rem;
+    background-size: cover;
+    color: #f4c90a;
+    display: flex;
+    padding-top: 5px;  
+    margin:auto; 
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+   
+}
+
+h4{
+    float:left;   
+    position: relative; 
+    padding: 5px;
+    font-size: 15px;
+    
+}  
+ h4 span {
+    position: absolute;
+    right: 0;
+    width: 0;    
+    background-color:rgb(26, 26, 26);
+    border-left: 1px solid  #f4c90a;
+    animation: maquina 5s infinite alternate steps(32);
+}
+
+@keyframes maquina {
+    from{
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+    
+}
+
+
+
+.container-conoce{
+    background-color: #f4cf2a;
+}
+
+.imagen-conoce {
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.imagen-conoce img{
+    width: 40%;
+    margin-top: 20px;
+    border-radius: 40%;
+    
+}
+
+.texto-conoce h3{
+    display: flex;
+    text-transform: none;
+    justify-content:start;
+    font-weight: 900;
+}
+
+.texto-conoce h3:hover{
+    
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    transition: all 5s;
+    
+}
+
+.container-card{
+    position: relative;
+    width: 170px;
+    height: 180px;
+    padding-top: 20px;
+    display: flex;  
+    left: 12px;
+    align-items: center;  
+    margin: 10px;
+   padding-left: 2rem;
+   
+}
+
+
+
+.container-card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+  
+}
+
+.container-card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+    
+}
+
+.container-card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit:cover ;
+  
+}
+
+.container-card .front h3{
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background:rgba(0, 0, 0,.4);
+    text-align: center;
+
+}
+
+.container-card .back{
+    transform: perspective(600px) rotateY(180deg); 
+    background: #f4cf2a;
+    padding: 15px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    text-align: center;
+}
+
+
+
+
+
+.container-card .back h3{
+    font-size: 20px;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+.container-card p{
+    letter-spacing: 1px;
+}
+
+.container-card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+.container-card:hover .back {
+    transform: perspective(600px) rotateY(0deg);
+}
+.form-registar{
+    width: 100%;
+    background: #0f0f0f;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:#f4c90a;
+    box-shadow: 7px 13px 37px #000;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form-registar h4{
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+.controls{
+    width: 100%;
+    background:#f4c90a;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form-registar p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.form-registar a:hover{
+    color: #faf5f5;
+    text-decoration: underline;
+    
+}
+
+.form-registar .btn{
+    width: 100%;
+    background:#f4c90a ;
+    color: #f5f1f1;
+    border: none;
+    padding: 12px;
+    margin:16px 0;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer  h5  {
+    font-size: 18px;
+    color: #fff;
+    
+}
+.p-footer{
+    font-size: 18px;
+    color: #fff;
+    
+}
+
+footer i{
+    font-size: 40px;
+    color: #fff;
+    padding: 7px;
+   
+    
+}
+
+@media (min-width: 576px ){
+    .container-body{
+        width: 100%;
+        grid-template-columns: 2fr 10fr;
+        grid-template-areas: 
+        "menu main"
+        "menu section"
+       ;
+    }
+
+    .container-form{
+        display: none;
+    }
+
+    menu{
+        background-color:#fff;
+                
+    }
+   
+    
+    .logo-m{
+        margin-top: -100px;
+    }
+    .logo-text{
+        display: flex;
+    }
+    .logo-text > h4 {
+        margin-top: -60px;
+        font-size: large;
+        color: #f4c90a;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        margin-top: 8rem;
+        gap:10px;
+        margin-left:10px;
+        
+        
+    }
+   ul .pendon{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 600px;
+        margin-top: 30px;
+    }
+    .container-card{
+        width: 200px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    }
+
+    form > h4{
+        font-size: x-large;           
+        font-weight: 800;
+    }
+    .texto-conoce > h3{       
+            font-size: x-large;           
+            font-weight: 900;
+        
+        
+    }    
+    .form-registar h4{
+        font-weight: bold;
+    }
+
+   
+
+    footer{
+        width: 100%;
+       
+    }
+    
+
+    li > a{
+        color: #090909;
+        font-weight: 900;
+        font-size: 40px;
+        margin-left: 30px;
+    }
+    li > a:hover{
+        color:#f4c90a;
+    }
+}
